@@ -102,12 +102,6 @@
     </if>
     <include refid="WithDept_Column_List" />
     FROM tbl_emp e LEFT JOIN tbl_dept d ON e.d_id = d.dept_id
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null" >
-      order by ${orderByClause}
-    </if>
   </select>
   <select id="selectByPrimaryKeyWithDept" resultMap="WithDeptResultMap">
   	 select 
